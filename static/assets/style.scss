@@ -1,0 +1,826 @@
+@font-face {
+    font-family: sal;
+    src: url(/Stolzl\ Bold.ttf);
+}
+@import "mix";
+@import "var";
+@import "colors";
+*{
+    @include boiler;
+    font-family: sal;
+}
+header{
+    position: relative;
+    width: 100%;
+    height: 140vh;
+    background: url(images/heroimage.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 999;
+
+    .services-section{
+        position: absolute;
+        width: 200px;
+        height:400px;
+        background: $white;
+        border-radius: 9px;
+        top: 70px;
+        left: 34%;
+        z-index: 999;
+        display: none;
+
+        & ul li a{
+            text-decoration: none;
+            color: #000;
+        }
+    }
+
+    .nav{
+        width: 100%;
+        height: 95px;
+        border-bottom: 1px solid $gray-light;
+        padding: 12px;
+
+        .nav-bar{
+            margin-left: 11vw;
+        }
+        & ul li a{
+            text-decoration: none;  
+            font-size: 15px;
+            color: $white;
+            text-transform: capitalize;
+            transition: 0.3s ease-in;
+        }
+        & ul li a:hover{
+            color: $purple;
+        }
+        .nav-icon i{
+            color: $white;
+            font-size: 2vw;
+        }
+        .nav-icon a{
+            text-decoration: none;
+            color: $white;
+            font-size: 15px;
+            text-transform: capitalize;
+        }
+        .nav-icon .place-order a{
+            padding:18px 25px;
+            border-radius: 40px;
+            background: $purple;
+            transition: 0.5s ease-out;
+        }
+        .nav-icon .place-order a:hover{
+            background: #423fecc7;
+        }
+    }
+    .header-section{
+        position: relative;
+
+        .header-para{
+            padding-top:10px;
+        }
+        .header-para h1
+            {
+                font-size: 3.5vw;
+                font-weight: 500;
+                color: $white;
+                line-height: 80px;
+            }
+            .header-para h1 span{
+                color: $purple;
+                background: $white;
+                padding: 15px 18px;
+                border-radius: 15px;
+            }
+            .header-para p{
+                color: $white;
+                font-size: 19px;
+                line-height: 30px;
+                font-weight: 100;
+            }
+            .header-para .get{
+                width: 201px;
+                height: 67px;
+                border: 1px solid $purple;
+                border-radius: 40px;
+            }
+            .header-para .get a{
+                text-decoration: none;
+                padding: 14px 25px;
+                color: $white;
+            font-size: 1vw;
+            letter-spacing: 1px;
+            font-weight: 100;
+            text-transform: uppercase;
+                background: 
+                $purple;
+                border-radius: 40px;
+            }
+            .header-para .talk a{ 
+                text-decoration: none;
+                padding: 17px 30px;
+                color: $white;
+            font-size: 1vw;
+            letter-spacing: 1px;
+            font-weight: 100;
+            text-transform: uppercase;
+                background:#423fec3b ;
+                border: 1px solid $purple;
+                border-radius: 40px;
+                
+            }
+    }
+    .bussinessTools{
+        position: relative;
+        width: 98%;
+        height: 100px;
+        background: $white;
+        color: #000;
+        border-radius: 25px;
+        margin-top: 5vw;
+        display: block;
+
+        .arrow-left{
+            border-radius: 50%;
+            height: 40px;
+            width: 40px;
+            border: 1px solid $purple;
+            cursor: pointer;
+        }
+        & i{
+            color: $purple;
+        }
+        .arrow-right{
+            border-radius: 50%;
+            height: 40px;
+            width: 40px;
+            border: 1px solid $purple;
+            cursor: pointer;
+        }
+        & i{
+            color: $purple;
+        }
+    }
+}
+// hero-section
+.hero-section{
+    width: 98%;
+    height: 100%;
+    background: $purple-dark;
+    border-radius: 25PX;
+    margin-top: 70px;
+    .hero-h1 h1{
+        line-height: 60px;
+    }
+    .hero-h1 p{
+        line-height: 25px;
+        padding:  0 40px 0 0;
+    }
+    .hero-bt{
+        width: 200px;
+        height: 67px;
+        border: 1px solid $purple;
+        border-radius: 40px;
+    }
+    .hero-bt a{
+        text-decoration: none;
+                padding: 18px 25px;
+                color: $white;
+            font-size: 1vw;
+            letter-spacing: 1px;
+            font-weight: 100;
+            text-transform: uppercase;
+                background: 
+                $purple;
+                border-radius: 40px;
+    }
+}
+// dissertation
+.dissertation{
+    position: relative;
+
+    .h1{
+
+        font-size:3.9rem;
+    }
+    .disser-span{
+        color: $purple;
+    }
+    .card-child{
+        padding: 20px 20px;
+
+    }
+    .card{
+        border-radius: 15px;
+        border: none;
+        background: #E7E3FE;
+    }
+    .dis-icons{
+        width: 50px;
+        height: 50px;
+        @include flex;
+        border-radius: 50%;
+    }
+    .h2 h2{
+        font-size: 25px;
+    }
+    .h2 h2 span{
+        color: $purple;
+    }
+    .h2 p{
+        line-height: 25px;
+        font-size: 16px;
+    }
+    .card:hover{
+        background: $purple-dark;
+    }
+}
+
+// aritfiliatioons
+.artifi{
+    position: relative;
+
+    .art h1{
+        font-size: 3.9rem;
+
+        & span{
+            color: $purple;
+        }
+    }
+    .main-flex img{
+        width: 250px;
+        padding-bottom: 40px;
+    }
+}
+// process
+
+.process{
+    position: relative;
+    background: $bg-gray;
+    .c01 {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        background: $white;
+        margin-left: 150px;
+        font-size: 10px;
+        color: $purple;
+    }
+}
+
+// business
+.business{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: $bg-gray;
+    .busi-card{
+        background: $white;
+    }
+    .img-round{
+        width: 55px;
+        height: 55px;
+        background: $gray-light;
+    } 
+    .shadow-main{
+        border-radius: 10px;
+        margin: 5px;
+    }
+    .col-lg-5{
+        border-radius: 9px;
+        background: $gray-light;
+    }
+    .busi-head h1{
+        font-size: 4.5vw;
+    }
+    .testi-sec{
+        background: $white;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+    }
+    .test{
+        width: 70px;
+        height: 70px;
+        border: 1px solid black;
+    }
+}
+
+// find works
+
+.find-works{
+    position: relative;
+
+    h1{
+        font-size: 5vw;
+    }
+    .purple{
+        color: $purple;
+    }
+    .ex{
+        width: 210px;
+        height: 70px;
+        border: 3px solid $purple;
+        border-radius: 40px;
+        @include flex;
+    }
+    & a{
+        width: 198px;
+        height: 59px;
+        text-decoration: none;
+        border: none;
+        background: $purple;
+        border-radius: 40px;
+        color: $white;
+        @include flex;
+        gap: 12px;
+    }
+    & i{
+        font-size: 18px;
+    }
+}
+// footer
+footer{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: $purple-dark;
+    .btn-foot{
+        width: 170px;
+        height: 65px;
+        border: 1px solid $white;
+        border-radius: 40px;
+        @include flex;
+
+        & a{
+            width: 160px;
+            height: 55px;
+            @include flex;
+            background: $white;
+            border-radius: 40px;
+            color: #000000b9;
+        }
+    }
+    .list-foot ul li{
+        list-style:disc;
+        color: $white;
+        & a{
+            text-decoration: none;
+            color: $white;
+        }
+    }
+    .list-foot ul li  a:hover{
+        color: $purple;
+    }
+    hr{
+        margin-top:5.3rem ;
+        background: $white;
+        padding-top: 2px;
+    }
+    .last-foot i{
+        font-size:2vw;
+        color: $white;
+        cursor: pointer;
+        transition: 0.5s ease-out;
+    }
+    .last-foot i:hover{
+        color: $purple;
+    }
+    .last-foot p{
+        font-size: 15px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: $white;
+    }
+}
+
+// ########### reserch page-1
+
+.reserch{
+    position: relative;
+    background: url(images/bgimage.png);
+    background-position: top;
+    background-size: cover;
+    background-position: center;
+    height: 113vh;
+    
+    .reser-para h2{
+        color: $white;
+        font-size: 3.5vw;
+    }
+}
+
+// subject
+.subject{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: $bg-gray;
+
+    .sub-h1 h1{
+        font-size: 4vw;
+        & span{
+            color: $purple;
+        }
+    }
+    .sub-img {
+        border-radius: 50%;
+        background:$bg-b-gray;
+        @include flex;
+        width: 60px;
+        height: 60px;
+
+    }
+    .card-sub{
+        width: 300px;
+        border-radius: 15px;
+        height: 290px;
+        background:$white;
+    }
+    .card-a{
+        overflow: hidden;
+    }
+    .card-sub a{
+        transition: 0.1s;
+    }
+    .card-sub a:hover{
+        font-size: 1.4vw;
+    }
+} 
+// smarter
+.smarter{
+    position: relative;
+    .smart-h1 h1{
+        font-size: 4vw;
+        word-spacing: 2px;
+        & span{
+            color: $purple;
+        }
+    }
+    .card-smart{
+        width: 300px;
+        height: 290px;
+        background: $bg-gray;
+        border-radius: 20px;
+        & h1{
+            font-size: 3vw;
+        }
+    }
+    .col-lg-8{
+        background: $purple-dark;
+        height: 290px;
+        border-radius: 25px;
+    }
+    .card-circle{
+        border-radius: 50%;
+        width: 65px;
+        height: 65px;
+        background: #190E40 ;
+        @include flex;
+    }
+    .smarter-h1 h1{
+        font-size: 3vw;
+    }
+}
+// dissertation
+.bg-back{
+    background: $bg-gray;
+    height: 100%;
+}
+//  dissertaion-main
+
+.dissertation-main{
+    position: relative;
+    background: url(images/s-research.png);
+    background-position:center;
+    background-attachment: fixed;
+    background-size: cover;
+
+    .disser-para h2{
+        line-height: 90px;
+    }
+    .diss-main-span{
+        text-align: start;
+        padding: 20px 20px;
+        background: $white;
+        border-radius: 20px;
+        color: $purple;
+    }
+}
+
+// team-paper
+
+.team-paper{
+    position: relative;
+    background: url(images/s-teampaper.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    .term-para h2{
+        font-size: 4.5vw;
+        line-height: 95px;
+    }
+    & span{
+        padding: 19px 18px;
+        background: $white;
+        color: $purple;
+        border-radius: 20px;
+    }
+}
+// home work page
+.home-work{
+    position: relative;
+    background: url(images/s-homework.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    .home-para{
+        & h2{
+            line-height: 99px;
+            font-size: 4.4vw;
+        }
+        & span{
+            padding: 20px 20px;
+            background: $white;
+            border-radius: 15px;
+            color: $purple;
+        }
+    }
+}
+
+// acedmiv page 
+.academic{
+    height: 130vh;
+    position: relative;
+    background: url(images/s-acedmichelp.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+// math page
+.math{
+    position: relative;
+    background: url(images/mathhelp.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    .math-para{
+        & h2{
+            line-height: 130px;
+        }
+    }
+}
+.coverd{
+    position: relative;
+    
+    .cover-h h1{
+        font-size: 4vw;
+
+        & span{
+            color: $purple;
+        }
+    }
+    .same {
+        border:  1px solid rgba(8, 56, 100, 0.219);
+        border-radius: 40px;
+        padding: 15px 25px;
+        
+        & h3{
+            font-size: 1.5vw;
+        }
+    }
+    .math-bt{
+        width: 160px;
+        height: 60px;
+        border: 2px solid $purple;
+        border-radius: 30px;
+        @include flex;  
+
+        & a{
+            width: 150px;
+            height: 50px;
+            background: $purple;
+            border-radius: 30px;
+            color: $white;
+        }
+    }
+}
+// tranparent 
+
+.tranparent{
+    position: relative;
+
+    .trans-para {
+    & h1{
+        font-size: 4vw;
+        & span{
+            color: $purple;
+        }
+    }
+    }
+    .col-lg-3{
+        background: $gray-lightly;
+        border-radius: 15px;
+        width: 260px;
+        height: 199px;
+    }
+}
+// money-back 
+.money-back{
+    position: relative;
+    background: $gray-lightly;
+    .back-h h1{
+        font-size: 4vw;
+        & span{
+            color: $purple;
+        }
+    }
+    .col-lg-7 {
+        height: 70vh;
+        background: $white;
+        border-radius: 25px;
+
+        & h1{
+            font-size: 4vw;
+            & span{
+                color: $purple;
+            }
+        }
+    }
+    .col-lg-5{
+        background: $bg-light-gray;
+        border-radius: 25px;
+    }
+}
+// reviews
+.reviews{
+    position: relative;
+    background: url(images/reviewbanner.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    .span{
+        color: $purple;
+    }
+    .rate{
+        background: $purple;
+        padding: 8px 15px;
+        border-radius: 10px;
+    }
+}
+.customer{
+    position: relative;
+    background: $gray-lightly;
+    .custo{
+        & h1{
+            font-size: 4vw;
+        }
+        & span{
+            color: $purple;
+        }
+    }
+}
+.hero-section{
+    position: relative;
+
+    .hero-h2 h1{
+        font-size: 4vw;
+        line-height: 90px;
+        & span{
+            color: $purple;
+        }
+    }
+}
+// about page
+.about{
+    position: relative;
+    background: url(images/bgimage.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+
+    .about-img{
+        border: 5px solid $white;
+        border-radius: 15px;
+        display: block;
+        object-fit: cover;
+        & img{
+            border-radius: 10px;
+            filter: blur(0);
+            width: 100%;
+            height: 6   00px;
+        }
+    }
+    .about-img{
+        & img:hover{
+            filter: blur(1px);
+        }
+    }
+}
+.py-max{
+    margin-top: 20px;
+}
+// about assiss
+.about-assisstant{
+    position: relative;
+    margin-top: 35%;
+    & .container{
+    background: $gray-light;
+    border-radius: 10px;
+    }
+    .about-para{
+        & h1 span{
+            color: $purple;
+        }
+        .write{
+            font-size: 1.3vw;
+        }
+    }
+}
+// GUIDELINES
+.guidelines{
+    position: relative;
+    h1{
+        font-size: 4vw;
+        & span{
+            color: $purple;
+        }
+    }
+    .contain{
+        height: 290px;
+        border-radius: 16px;
+        .guide-img{
+            width: 60px;
+            height: 60px;
+            @include flex;
+            background:$bg-light-gray;
+        }
+    }
+    .proof{
+        border-radius: 16px;
+        background: $purple;
+    }
+}
+// how to order
+.how-to{
+    position: relative;
+    background: url(images/howtoorder.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 999;
+    .how-to-h2{
+        & h2{
+            line-height: 85px;
+        }
+    }
+}
+// how it works;;;;;;;;;;;;
+.how-it-works{
+    position: relative;
+    .how-h1{
+        & h1{
+            font-size: 5vw;
+            & span{
+                color: $purple;
+            }
+        }
+    }
+    .login{
+        @include flex;
+        height: 300px;
+        border-radius: 150px;
+        background: $bg-light-gray;
+    }
+    .list-dot{
+        ul {
+            list-style: disc;
+            padding: 0 20px;
+        }
+    }
+}
+.form{
+    height: 150vh;
+    background: $bg-b-gray;
+    position: relative;
+    form{
+        & button{
+            background: $purple;
+            color: wheat;
+            border: none;
+            border-radius: 5px;
+        }
+        & input{
+            width: 90%;
+        }
+    }
+    .forming{
+        width: 60px;
+        height: 60px;
+        background: white;
+        border-radius: 5px;
+    }
+}

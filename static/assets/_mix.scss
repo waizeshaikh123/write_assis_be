@@ -1,0 +1,16 @@
+// boiler plate
+@mixin boiler{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+        body,html{
+        width: 100%;
+        height: 100%;
+        }
+}
+
+@mixin flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
