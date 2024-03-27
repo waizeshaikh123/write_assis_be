@@ -13,9 +13,7 @@
         integrity="sha512-HXXR0l2yMwHDrDyxJbrMD9eLvPe3z3qL3PPeozNTsiHJEENxx8DH2CxmV05iwG0dwoz5n4gQZQyYLUNt1Wdgfg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="stylesheet" href="reserch.html">
-    <link rel="stylesheet" href="dissertation.html">
+    <link rel="stylesheet" href="/static/assets/style.css">
     <title>Writing Assistant</title>
 </head>
 
@@ -28,7 +26,7 @@
                     <div class="col-lg-6">
                         <div class=" d-flex flex-column justify-content-center align-items-center gap-3">
                             <div>
-                                <img src="assets/images/booklogo.png" alt="">
+                                <img src="/static/assets/images/booklogo.png" alt="">
                             </div>
                             <div class=" text-center form-log">
                                 <h1>Login 👋</h1>
@@ -36,15 +34,16 @@
                             </div>
                         </div>
 
-                        <form>
+                        <form method="post">
+                            {% csrf_token %}
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                <input type="email"name='email' class="form-control" id="exampleInputEmail1"
                                     aria-describedby="emailHelp" placeholder="Enter your email">
                             </div>
                             <div class="mb-3 pt-4">
                                 <label for="exampleInputPassword1" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                <input type="password" name="password" class="form-control" id="exampleInputPassword1"
                                     placeholder="Enter Your Password">
                             </div>
 
@@ -55,15 +54,15 @@
 
                                 <div class=" d-flex justify-content-center gap-5 pt-5">
                                     <div class="forming d-flex justify-content-center align-items-center">
-                                        <img src="assets/images/google.png" alt="" class=" img-fluid">
+                                        <img src="/static/assets/images/google.png" alt="" class=" img-fluid">
                                     </div>
 
                                     <div class="forming d-flex justify-content-center align-items-center">
-                                        <img src="assets/images/facebook.png alt=" class=" img-fluid" alt="FB">
+                                        <img src="/static/assets/images/facebook.png alt=" class=" img-fluid" alt="FB">
                                     </div>
 
                                     <div class="forming d-flex justify-content-center align-items-center">
-                                        <img src="assets/images/tiktok.png" alt="" class=" img-fluid">
+                                        <img src="/static/assets/images/tiktok.png" alt="" class=" img-fluid">
                                     </div>
                                 </div>
                             </div>
@@ -71,7 +70,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div>
-                            <img src="assets/images/loginbanner.png" alt="" class=" img-fluid">
+                            <img src="/static/assets/images/loginbanner.png" alt="" class=" img-fluid">
                         </div>
                     </div>
                 </div>
@@ -87,7 +86,7 @@
             duration: 1000
         });
     </script>
-    <script src="script.js"></script>
+    <script src="/static/assets/script.js"></script>
 </body>
 
 </html>
